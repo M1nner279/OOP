@@ -4,25 +4,25 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="laboop.Views.MainWindow"
-        x:DataType="vm:MainWindowViewModel"
+        x:Class="laboop.Views.MenuView"
+        x:DataType="vm:MenuViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="laboop">
-
+        Title="Меню">
+    
     <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
+                <!-- This only sets the DataContext for the previewer in an IDE,
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
+                <vm:MenuViewModel/>
     </Design.DataContext>
-
+        
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="auto" MinHeight="200"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="2"/>
+        <TextBlock Grid.Row="0" Text="{Binding Welcome}" Padding="30" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Text="Push Me Please"/>
     </Grid>
-    
+        
 </Window>
