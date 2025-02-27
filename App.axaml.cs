@@ -25,6 +25,7 @@ public partial class App : Application
             DisableAvaloniaDataAnnotationValidation();
             desktop.MainWindow = new MenuView
             {
+                
                 DataContext = new MenuViewModel(),
             };
         }

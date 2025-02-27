@@ -22,6 +22,19 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Text="{Binding Welcome}" Padding="30" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <ItemsControl Grid.Row="1" ItemsSource="{Binding MenuItems}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderThickness="1" BorderBrush="Gray" CornerRadius="5" Padding="10" Margin="5">
+                        <StackPanel>
+                            <TextBlock Text="{Binding Name}" FontSize="18" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Price, StringFormat='Цена: {0} руб.'}"/>
+                            <TextBlock Text="{Binding GetInfo}"/>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
         <TextBox HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Text="Push Me Please"/>
     </Grid>
         

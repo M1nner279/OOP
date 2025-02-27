@@ -1,6 +1,12 @@
-namespace laboop.ViewModels;
+using System.Collections.ObjectModel;
+using laboop.Models;
 
-public class MenuViewModel : ViewModelBase
+namespace laboop.ViewModels
 {
-    public string Welcome {get; } = "Hello, there";
+    public class MenuViewModel : ViewModelBase
+    {
+        public string Welcome { get; } = "Меню ресторана";
+        public ObservableCollection<MenuItem> MenuItems { get; } = (Menu.Items);
+        
+    }
 }
