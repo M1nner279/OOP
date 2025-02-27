@@ -1,10 +1,10 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:laboop.ViewModels"
+        xmlns:vm="using:MenuApp.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="laboop.Views.MenuView"
+        x:Class="MenuApp.Views.MenuView"
         x:DataType="vm:MenuViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="Меню">
@@ -17,25 +17,26 @@
         
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto" MinHeight="200"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Text="{Binding Welcome}" Padding="30" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <ItemsControl Grid.Row="1" ItemsSource="{Binding MenuItems}">
-            <ItemsControl.ItemTemplate>
+        <TextBlock Grid.Row="0" Text="{Binding Welcome}" Padding="30" FontSize="20" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <ListBox Grid.Row="1" ItemsSource="{Binding MenuItems}">
+            <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Border BorderThickness="1" BorderBrush="Gray" CornerRadius="5" Padding="10" Margin="5">
-                        <StackPanel>
-                            <TextBlock Text="{Binding Name}" FontSize="18" FontWeight="Bold"/>
-                            <TextBlock Text="{Binding Price, StringFormat='Цена: {0} руб.'}"/>
-                            <TextBlock Text="{Binding GetInfo}"/>
-                        </StackPanel>
+                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="20" Padding="10" Margin="5" Width="400" HorizontalAlignment="Left">
+                        <DockPanel>
+                            <Image Source="avares://MenuApp/Assets/pizza.jpg" Width="50" Height="50"/>
+                            <Image Source="{Binding ImgSource}" Height="100" Width="130" HorizontalAlignment="Left"/>
+                            <StackPanel VerticalAlignment="Bottom">
+                                <TextBlock Text="{Binding Name}" FontSize="18" FontWeight="Bold"/>
+                                <TextBlock Text="{Binding Price, StringFormat='Цена: {0} руб.'}"/>
+                                <TextBlock Text="{Binding GetInfo}"/>
+                            </StackPanel>
+                        </DockPanel>
                     </Border>
                 </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>
-        <TextBox HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Text="Push Me Please"/>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
-        
 </Window>

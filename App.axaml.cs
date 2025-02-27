@@ -4,10 +4,10 @@ using Avalonia.Data.Core;
 using Avalonia.Data.Core.Plugins;
 using System.Linq;
 using Avalonia.Markup.Xaml;
-using laboop.ViewModels;
-using laboop.Views;
+using MenuApp.ViewModels;
+using MenuApp.Views;
 
-namespace laboop;
+namespace MenuApp;
 
 public partial class App : Application
 {

@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace laboop.ViewModels;
+namespace MenuApp.ViewModels;
 
 public class ViewModelBase : ObservableObject
 {

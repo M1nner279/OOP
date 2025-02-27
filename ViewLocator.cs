@@ -1,9 +1,9 @@
 using System;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using laboop.ViewModels;
+using MenuApp.ViewModels;
 
-namespace laboop;
+namespace MenuApp;
 
 public class ViewLocator : IDataTemplate
 {

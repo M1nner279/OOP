@@ -1,7 +1,7 @@
 ﻿using Avalonia;
 using System;
 
-namespace laboop;
+namespace MenuApp;
 
 sealed class Program
 {

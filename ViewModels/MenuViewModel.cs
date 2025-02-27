@@ -1,7 +1,7 @@
 using System.Collections.ObjectModel;
-using laboop.Models;
+using MenuApp.Models;
 
-namespace laboop.ViewModels
+namespace MenuApp.ViewModels
 {
     public class MenuViewModel : ViewModelBase
     {
