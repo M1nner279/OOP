@@ -22,7 +22,6 @@ namespace MenuApp.Models
                 OnPropertyChanged(nameof(ImagePath)); // Уведомление UI
             } 
         }
-
         public Bitmap ImageBitmap { get; set; }
         private Bitmap LoadBitmap(string imagePath)
         {
@@ -45,7 +44,6 @@ namespace MenuApp.Models
             Console.WriteLine($"ImagePath: {ImagePath}");
             ImageBitmap = LoadBitmap(imagePath);
         }
-
         public string Info => toString();
         public virtual string toString()
         {

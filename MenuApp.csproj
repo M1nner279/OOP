@@ -14,6 +14,12 @@
     </ItemGroup>
 
     <ItemGroup>
+        <None Update="Assets\**">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
         <AvaloniaResource Include="Assets\*.png" />
     </ItemGroup>
 
