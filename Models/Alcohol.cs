@@ -7,5 +7,8 @@ public class Alcohol : Drink
     {
         Strength = strength;
     }
-    public override string GetInfo => $"Объём: {Volume} мл\nКрепость: {Strength} %";
+    public override string toString()
+    {
+        return base.toString() + $"Крепость: {Strength} %";
+    }
 }

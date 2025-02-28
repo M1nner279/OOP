@@ -45,9 +45,11 @@ namespace MenuApp.Models
             Console.WriteLine($"ImagePath: {ImagePath}");
             ImageBitmap = LoadBitmap(imagePath);
         }
-        public abstract string GetInfo
+
+        public string Info => toString();
+        public virtual string toString()
         {
-            get;
+            return $"Цена: {Price} руб.\n";
         }
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged(string propertyName) =>

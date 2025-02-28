@@ -29,8 +29,7 @@
                             <Image Source="{Binding ImageBitmap}" Height="100" Width="160" HorizontalAlignment="Left"/>
                             <StackPanel VerticalAlignment="Bottom">
                                 <TextBlock Text="{Binding Name}" FontSize="18" FontWeight="Bold"/>
-                                <TextBlock Text="{Binding Price, StringFormat='Цена: {0} руб.'}"/>
-                                <TextBlock Text="{Binding GetInfo}"/>
+                                <TextBlock Text="{Binding Info}"/>
                             </StackPanel>
                         </DockPanel>
                     </Border>

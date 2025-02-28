@@ -12,9 +12,9 @@ namespace MenuApp.Models
             new Drink("Чай", 5, "tea.png",200),
             new Dessert("Торт", 12, "cake.png",150, 500),
             new Dessert("Мороженое", 9, "icecream.png",100, 250),
-            new Salad("Цезарь", 6, "ceasar.png", 100, 200),
-            new Alcohol("Вино", 500, "vine.png",750, 12),
-            new Alcohol("Пиво", 300, "beer.png",500, 7)
+            new Salad("Цезарь", 15, "ceasar.png", 100, 200),
+            new Alcohol("Вино", 24, "vine.png",250, 12),
+            new Alcohol("Пиво", 7, "beer.png",500, 7)
         };
     }
 }

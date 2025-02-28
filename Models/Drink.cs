@@ -8,7 +8,9 @@ namespace MenuApp.Models
         {
             Volume = volume;
         }
-
-        public override string GetInfo => $"Объём: {Volume} мл";
+        public override string toString()
+        {
+            return base.toString() + $"Объём: {Volume} мл\n";
+        }
     }
 }
