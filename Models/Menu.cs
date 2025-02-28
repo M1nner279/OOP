@@ -6,12 +6,13 @@ namespace MenuApp.Models
     {
         public static ObservableCollection<MenuItem> Items { get; } = new() 
         {
-            new Food("Пицца", 550, "pizza.jpg",500, 1200),
-            new Food("Бургер", 350, "burger.jpg",300, 800),
-            new Drink("Кофе", 150, "coffee.png",250),
-            new Drink("Чай", 100, "tea.png",200),
-            new Dessert("Торт", 250, "cake.png",150, 500),
-            new Dessert("Мороженое", 200, "icecream.png",100, 250),
+            new Food("Пицца", 24, "pizza.jpg",500, 1200),
+            new Food("Бургер", 12, "burger.jpg",300, 800),
+            new Drink("Кофе", 7, "coffee.png",250),
+            new Drink("Чай", 5, "tea.png",200),
+            new Dessert("Торт", 12, "cake.png",150, 500),
+            new Dessert("Мороженое", 9, "icecream.png",100, 250),
+            new Salad("Цезарь", 6, "ceasar.png", 100, 200),
             new Alcohol("Вино", 500, "vine.png",750, 12),
             new Alcohol("Пиво", 300, "beer.png",500, 7)
         };

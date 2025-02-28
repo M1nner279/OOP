@@ -26,7 +26,7 @@
                 <DataTemplate>
                     <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="20" Padding="10" Margin="5" Width="500" HorizontalAlignment="Left">
                         <DockPanel>
-                            <Image Source="{Binding ImageBitmap}" Height="100" Width="130" HorizontalAlignment="Left"/>
+                            <Image Source="{Binding ImageBitmap}" Height="100" Width="160" HorizontalAlignment="Left"/>
                             <StackPanel VerticalAlignment="Bottom">
                                 <TextBlock Text="{Binding Name}" FontSize="18" FontWeight="Bold"/>
                                 <TextBlock Text="{Binding Price, StringFormat='Цена: {0} руб.'}"/>
