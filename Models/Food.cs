@@ -4,7 +4,7 @@ public class Food : MenuItem
 {
     public int Calories { get; set; }
     public int Mass { get; set; }
-    public Food(string name, int price, string imgSource, int calories, int mass) : base(name, price, imgSource)
+    public Food(string name, int price, string imagePath, int calories, int mass) : base(name, price, imagePath)
     {
         Calories = calories;
         Mass = mass;

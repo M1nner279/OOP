@@ -4,7 +4,7 @@ namespace MenuApp.Models
     {
         public int Volume { get; set; }
         
-        public Drink(string name, int price, string imgSource, int volume) : base(name, price, imgSource)
+        public Drink(string name, int price, string imagePath, int volume) : base(name, price, imagePath)
         {
             Volume = volume;
         }
