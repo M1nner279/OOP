@@ -20,21 +20,39 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Text="{Binding Welcome}" Padding="30" FontSize="20" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <ListBox Grid.Row="1" ItemsSource="{Binding MenuItems}">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="20" Padding="10" Margin="5" Width="500" HorizontalAlignment="Left">
-                        <DockPanel>
-                            <Image Source="{Binding ImageBitmap}" Height="100" Width="160" HorizontalAlignment="Left"/>
-                            <StackPanel VerticalAlignment="Bottom">
-                                <TextBlock Text="{Binding Name}" FontSize="18" FontWeight="Bold"/>
-                                <TextBlock Text="{Binding Info}"/>
-                            </StackPanel>
-                        </DockPanel>
-                    </Border>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+        <TextBlock Grid.Row="0" Text="{Binding Title}" Padding="30" FontSize="20" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <DockPanel Grid.Row="1">
+            <ListBox ItemsSource="{Binding MenuItems}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="20" Padding="10" Margin="5" Width="500" HorizontalAlignment="Left">
+                            <DockPanel>
+                                <Image Source="{Binding ImageBitmap}" Height="100" Width="160" HorizontalAlignment="Left"/>
+                                <StackPanel VerticalAlignment="Bottom">
+                                    <TextBlock Text="{Binding Name}" FontSize="18" FontWeight="Bold"/>
+                                    <TextBlock Text="{Binding Info}"/>
+                                </StackPanel>
+                            </DockPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="10">
+                <!-- Выбор класса -->
+                <ComboBox Width="200" ItemsSource="{Binding ItemTypes}" SelectedItem="" />
+
+                <!-- Базовые поля -->
+                <!-- <TextBox Width="150" Watermark="Название" Text="{Binding NewItemName}"/> -->
+                <!-- <TextBox Width="150" Watermark="Описание" Text="{Binding NewItemInfo}"/> -->
+                <!-- <TextBox Width="150" Watermark="Путь к картинке" Text="{Binding NewItemImagePath}"/> -->
+                <!-- -->
+                <!-- ~1~ Динамически отображаемые поля @1@ -->
+                <!-- <TextBox Width="150" Watermark="Объем (мл)" Text="{Binding NewItemVolume}" Visibility="{Binding IsDrink, Converter={StaticResource BoolToVisibilityConverter}}"/> -->
+                <!-- <TextBox Width="150" Watermark="Вес (г)" Text="{Binding NewItemWeight}" Visibility="{Binding IsFood, Converter={StaticResource BoolToVisibilityConverter}}"/> -->
+                <!-- <TextBox Width="150" Watermark="Калории" Text="{Binding NewItemCalories}" Visibility="{Binding IsFood, Converter={StaticResource BoolToVisibilityConverter}}"/> -->
+                <!-- -->
+                <!-- <Button Content="Добавить" Command="{Binding AddMenuItemCommand}" Width="100"/> -->
+            </StackPanel>
+        </DockPanel>
     </Grid>
 </Window>

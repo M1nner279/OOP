@@ -8,7 +8,7 @@ namespace MenuApp.Models
         {
             Volume = volume;
         }
-        public override string toString()
+        protected override string toString()
         {
             return base.toString() + $"Объём: {Volume} мл\n";
         }

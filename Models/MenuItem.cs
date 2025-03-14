@@ -45,7 +45,7 @@ namespace MenuApp.Models
             ImageBitmap = LoadBitmap(imagePath);
         }
         public string Info => toString();
-        public virtual string toString()
+        protected virtual string toString()
         {
             return $"Цена: {Price} руб.\n";
         }

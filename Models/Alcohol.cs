@@ -7,7 +7,7 @@ public class Alcohol : Drink
     {
         Strength = strength;
     }
-    public override string toString()
+    protected override string toString()
     {
         return base.toString() + $"Крепость: {Strength} %";
     }

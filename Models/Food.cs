@@ -9,7 +9,7 @@ public class Food : MenuItem
         Calories = calories;
         Mass = mass;
     }
-    public override string toString()
+    protected override string toString()
     {
         return base.toString() + $"Вес: {Mass} г\nКалорийность: {Calories} ккал";
     }
